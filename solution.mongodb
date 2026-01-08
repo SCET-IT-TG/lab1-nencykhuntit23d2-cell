@@ -1,6 +1,7 @@
 /*----------------------------Exercise 1: Database & Collection Creation--------------------------------*/
 
-use examDB
+db = db.getSiblingDB("examDB");
+
 
 db.students.insertOne({
   name : "Hitakshi Mavani", 
