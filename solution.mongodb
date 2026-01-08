@@ -2,30 +2,34 @@
 
 db = db.getSiblingDB("examDB");
 
+db.students.insertOne({
+ name: 'Nency Khunt',
+  department: 'IT',
+  semester: 6,
+  mobile: '1234567890'
+})
+
+db.students.insertOne({
+  name : "Dhruvi Khunt", 
+  department : "IT", 
+  semester : 6, 
+  mobile : 1234587890
+})
+
+/*-----------------------------------Exercise 2: Insert Document with Multiple Fields----------------------------------*/
 
 db.students.insertOne({
   name : "Hitakshi Mavani", 
-  department : "CS",
+  department : "IT", 
   semester : 6, 
-  mobile : "1234567890"
+  mobile : 1234587999
 })
 
 db.students.insertOne({
   name : "Rajvi Panchani", 
-  department : "IT",
-  semester : 6, 
-  mobile : "1234564580"
-})
-
-
-/*-----------------------------------Exercise 2: Insert Document with Multiple Fields----------------------------------*/
-
-
-db.students.insertOne({
-  name : "Nency Khunt", 
   department : "IT", 
   semester : 6, 
-  mobile : "1234567890"
+  mobile : 5554587999
 })
 
 /*-------------------------------------------Exercise 3: Array of Simple Values--------------------------------------------*/
