@@ -14,22 +14,6 @@ examDB> db.students.insertOne({name : "Rajvi Panchani", department : "IT",})
   insertedId: ObjectId('695fb643f76965e1281e2624')
 }
 
-
-examDB> db.students.find().pretty()
-[
-  {
-    _id: ObjectId('695fb634f76965e1281e2623'),
-    name: 'Hitakshi Mavani',
-    department: 'CS'
-  },
-  {
-    _id: ObjectId('695fb643f76965e1281e2624'),
-    name: 'Rajvi Panchani',
-    department: 'IT'
-  }
-]
-
-
 -----------------------------------Exercise 2: Insert Document with Multiple Fields-----------------------------------------
 
 examDB> db.students.insertOne({name : "Nency Khunt", department : "IT", semester : 6, mobile : 1234567890})
@@ -44,33 +28,6 @@ examDB> db.students.insertOne({name : "Dhruvi Khunt", department : "CS", semeste
   insertedId: ObjectId('695fb5f7f76965e1281e2622')
 }
 
-examDB> db.students.find().pretty()
-[
-  {
-    _id: ObjectId('695fb634f76965e1281e2623'),
-    name: 'Hitakshi Mavani',
-    department: 'CS'
-  },
-  {
-    _id: ObjectId('695fb643f76965e1281e2624'),
-    name: 'Rajvi Panchani',
-    department: 'IT'
-  },
-  {
-    _id: ObjectId('695fb552f76965e1281e2621'),
-    name: 'Nency Khunt',
-    department: 'IT',
-    semester: 6,
-    mobile: 1234567890
-  },
-  {
-    _id: ObjectId('695fb5f7f76965e1281e2622'),
-    name: 'Dhruvi Khunt',
-    department: 'CS',
-    semester: 6,
-    mobile: 4554567890
-  }
-]
 
 -------------------------------------------Exercise 3: Array of Simple Values----------------------------------------------------
 
@@ -79,15 +36,6 @@ examDB> db.subjects.insertOne({course_name : "IT", subject_list : ["NoSql", "DAV
   acknowledged: true,
   insertedIds: { '0': ObjectId('695fb914f76965e1281e2627') }
 }
-
-examDB> db.subjects.find().pretty()
-[
-  {
-    _id: ObjectId('695fb914f76965e1281e2627'),
-    course_name: 'IT',
-    subject_list: [ 'NoSql', 'DAV', 'AIA', 'AWT', 'E-Comm' ]
-  }
-]
 
 
 --------------------------------------------Exercise 4: Array of Objects----------------------------------------------------
@@ -104,20 +52,6 @@ examDB> db.faculty.insertOne({department : "IT", teachers : [{name : "Dhaval Ran
   insertedId: ObjectId('695fc102f76965e1281e2629')
 }
 
-examDB> db.faculty.find().pretty()
-[
-  {
-    _id: ObjectId('695fc0a0f76965e1281e2628'),
-    department: 'IT',
-    teachers: [ { name: 'Tushar Gohil', experience: '10 Years' } ]
-  },
-  {
-    _id: ObjectId('695fc102f76965e1281e2629'),
-    department: 'IT',
-    teachers: [ { name: 'Dhaval Rana', experience: '10 Years' } ]
-  }
-]
-
 --------------------------------------------Exercise 5: Explicit Primary Key------------------------------------------------
 
 examDB> db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Patel", experience : "10 Years"}]})
@@ -126,24 +60,6 @@ examDB> db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), depart
   insertedId: ObjectId('695fb634f76965e1281e2644')
 }
 
-examDB> db.faculty.find().pretty()
-[
-  {
-    _id: ObjectId('695fc0a0f76965e1281e2628'),
-    department: 'IT',
-    teachers: [ { name: 'Tushar Gohil', experience: '10 Years' } ]
-  },
-  {
-    _id: ObjectId('695fc102f76965e1281e2629'),
-    department: 'IT',
-    teachers: [ { name: 'Dhaval Rana', experience: '10 Years' } ]
-  },
-  {
-    _id: ObjectId('695fb634f76965e1281e2644'),
-    department: 'IT',
-    teachers: [ { name: 'Ankit Patel', experience: '10 Years' } ]
-  }
-]
 --------------------------------------------Exercise 6: Duplicate Primary Key Observation--------------------------------------
 
 examDB> db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Kharvar", experience : "10 Years"}]})
@@ -168,27 +84,3 @@ examDB> db.result.insert({name : "Rajvi Panchani", SPI : 7.5, CPI : 8, backlogs 
   acknowledged: true,
   insertedIds: { '0': ObjectId('695fc6c4f76965e1281e262c') }
 }
-examDB> db.result.find().pretty()
-[
-  {
-    _id: ObjectId('695fc672f76965e1281e262a'),
-    name: 'Nency Khunt',
-    SPI: 9,
-    CPI: 8.5,
-    backlogs: 0
-  },
-  {
-    _id: ObjectId('695fc6a7f76965e1281e262b'),
-    name: 'Dhruvi Khunt',
-    SPI: 9.5,
-    CPI: 9,
-    backlogs: 0
-  },
-  {
-    _id: ObjectId('695fc6c4f76965e1281e262c'),
-    name: 'Rajvi Panchani',
-    SPI: 7.5,
-    CPI: 8,
-    backlogs: 0
-  }
-]
