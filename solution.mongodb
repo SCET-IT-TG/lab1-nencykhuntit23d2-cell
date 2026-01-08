@@ -2,43 +2,43 @@
 
 use examDB
 
-examDB> db.students.insertOne({name : "Hitakshi Mavani", department : "CS",})
+db.students.insertOne({name : "Hitakshi Mavani", department : "CS",})
 
-examDB> db.students.insertOne({name : "Rajvi Panchani", department : "IT",})
+db.students.insertOne({name : "Rajvi Panchani", department : "IT",})
 
 
 -----------------------------------Exercise 2: Insert Document with Multiple Fields-----------------------------------------
 
-examDB> db.students.insertOne({name : "Nency Khunt", department : "IT", semester : 6, mobile : 1234567890})
+db.students.insertOne({name : "Nency Khunt", department : "IT", semester : 6, mobile : 1234567890})
 
-examDB> db.students.insertOne({name : "Dhruvi Khunt", department : "CS", semester : 6, mobile : 4554567890})
+db.students.insertOne({name : "Dhruvi Khunt", department : "CS", semester : 6, mobile : 4554567890})
 
 
 -------------------------------------------Exercise 3: Array of Simple Values----------------------------------------------------
 
-examDB> db.subjects.insertOne({course_name : "IT", subject_list : ["NoSql", "DAV", "AIA", "AWT", "E-Comm"]})
+db.subjects.insertOne({course_name : "IT", subject_list : ["NoSql", "DAV", "AIA", "AWT", "E-Comm"]})
 
 
 --------------------------------------------Exercise 4: Array of Objects----------------------------------------------------
 
-examDB> db.faculty.insertOne({department : "IT", teachers : [{name : "Tushar Gohil", experience : "10 Years"}]})
+db.faculty.insertOne({department : "IT", teachers : [{name : "Tushar Gohil", experience : "10 Years"}]})
 
-examDB> db.faculty.insertOne({department : "IT", teachers : [{name : "Dhaval Rana", experience : "10 Years"}]})
+db.faculty.insertOne({department : "IT", teachers : [{name : "Dhaval Rana", experience : "10 Years"}]})
 
 
 --------------------------------------------Exercise 5: Explicit Primary Key------------------------------------------------
 
-examDB> db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Patel", experience : "10 Years"}]})
+db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Patel", experience : "10 Years"}]})
 --------------------------------------------Exercise 6: Duplicate Primary Key Observation--------------------------------------
 
-examDB> db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Kharvar", experience : "10 Years"}]})
+db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Kharvar", experience : "10 Years"}]})
 
 MongoServerError: E11000 duplicate key error collection: examDB.faculty index: _id_ dup key: { _id: ObjectId('695fb634f76965e1281e2644') }
 
 ----------------------------------------Exercise 7: Multiple Inserts Using insert()---------------------------------------------
 
-examDB> db.result.insert({name : "Nency Khunt", SPI : 9, CPI : 8.5, backlogs : 0})
+db.result.insert({name : "Nency Khunt", SPI : 9, CPI : 8.5, backlogs : 0})
 
-examDB> db.result.insert({name : "Dhruvi Khunt", SPI : 9.5, CPI : 9, backlogs : 0})
+db.result.insert({name : "Dhruvi Khunt", SPI : 9.5, CPI : 9, backlogs : 0})
 
-examDB> db.result.insert({name : "Rajvi Panchani", SPI : 7.5, CPI : 8, backlogs : 0})
+db.result.insert({name : "Rajvi Panchani", SPI : 7.5, CPI : 8, backlogs : 0})
