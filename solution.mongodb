@@ -4,12 +4,14 @@ use examDB
 
 db.students.insertOne({
   name : "Hitakshi Mavani", 
-  department : "CS"
+  department : "CS",
+  gender : "Female"
 })
 
 db.students.insertOne({
   name : "Rajvi Panchani", 
   department : "IT"
+  gender : "Female"
 })
 
 
@@ -91,21 +93,21 @@ MongoServerError: E11000 duplicate key error collection: examDB.faculty index: _
 
 ----------------------------------------Exercise 7: Multiple Inserts Using insert()---------------------------------------------
 
-db.result.insert({
+db.result.insertOne({
   name : "Nency Khunt", 
   SPI : 9, 
   CPI : 8.5, 
   backlogs : 0
 })
 
-db.result.insert({
+db.result.insertOne({
   name : "Dhruvi Khunt", 
   SPI : 9.5, 
   CPI : 9, 
   backlogs : 0
 })
 
-db.result.insert({
+db.result.insertOne({
   name : "Rajvi Panchani", 
   SPI : 7.5, 
   CPI : 8, 
