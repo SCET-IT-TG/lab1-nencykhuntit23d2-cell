@@ -3,17 +3,17 @@
 db = db.getSiblingDB("examDB");
 
 db.students.insertOne({
- name: 'Nency Khunt',
-  department: 'IT',
+ name: "Nency Khunt",
+  department: "IT",
   semester: 6,
-  mobile: '1234567890'
+  mobile: "1234567890"
 })
 
 db.students.insertOne({
   name : "Dhruvi Khunt", 
   department : "IT", 
   semester : 6, 
-  mobile : 1234587890
+  mobile : "1234587890"
 })
 
 /*-----------------------------------Exercise 2: Insert Document with Multiple Fields----------------------------------*/
@@ -22,14 +22,14 @@ db.students.insertOne({
   name : "Hitakshi Mavani", 
   department : "IT", 
   semester : 6, 
-  mobile : 1234587999
+  mobile : "1234587999"
 })
 
 db.students.insertOne({
   name : "Rajvi Panchani", 
   department : "IT", 
   semester : 6, 
-  mobile : 5554587999
+  mobile : "5554587999"
 })
 
 /*-------------------------------------------Exercise 3: Array of Simple Values--------------------------------------------*/
@@ -67,7 +67,7 @@ db.students.insertOne({
 
 
 db.faculty.insertOne({
-  _id : ObjectId('695fb634f76965e1281e2617'), 
+  _id : ObjectId("695fb634f76965e1281e2617"), 
   department : "IT", 
   teachers : [{
     name : "Ankit Kharvar", 
@@ -76,7 +76,7 @@ db.faculty.insertOne({
 })
 
 db.faculty.insertOne({
-  _id : ObjectId('695fb634f76965e1281e2617'), 
+  _id : ObjectId("695fb634f76965e1281e2617"), 
   department : "IT", 
   teachers : [{
     name : "Ashish Kharvar", 
@@ -84,7 +84,7 @@ db.faculty.insertOne({
   }]
 })
 
-/*MongoServerError: E11000 duplicate key error collect.faculty index: _id_ dup key: { _id: ObjectId('695fb634f76965e1281e2617') }*/
+/*MongoServerError: E11000 duplicate key error collect.faculty index: _id_ dup key: { _id: ObjectId("695fb634f76965e1281e2617") }*/
 
 /*----------------------------------------Exercise 7: Multiple Inserts Using insert()---------------------------------------------*/
 
