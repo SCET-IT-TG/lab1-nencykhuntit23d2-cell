@@ -6,7 +6,7 @@ db.students.insertOne({
  name: "Nency Khunt",
   department: "IT",
   semester: 6,
-  mobile: "1234567890"
+  mobile: "9999999999"
 })
 
 db.students.insertOne({
