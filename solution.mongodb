@@ -6,13 +6,15 @@ db = db.getSiblingDB("examDB");
 db.students.insertOne({
   name : "Hitakshi Mavani", 
   department : "CS",
-  gender : "Female"
+  semester : 6, 
+  mobile : "1234567890"
 })
 
 db.students.insertOne({
   name : "Rajvi Panchani", 
   department : "IT",
-  gender : "Female"
+  semester : 6, 
+  mobile : "1234564580"
 })
 
 
