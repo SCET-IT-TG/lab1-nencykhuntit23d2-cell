@@ -1,4 +1,4 @@
-----------------------------Exercise 1: Database & Collection Creation--------------------------------
+/*----------------------------Exercise 1: Database & Collection Creation--------------------------------*/
 
 use examDB
 
@@ -15,9 +15,8 @@ db.students.insertOne({
 })
 
 
------------------------------------Exercise 2: Insert Document with Multiple Fields-----------------------------------------
+/*-----------------------------------Exercise 2: Insert Document with Multiple Fields----------------------------------*/
 
-use examDB
 
 db.students.insertOne({
   name : "Nency Khunt", 
@@ -26,17 +25,8 @@ db.students.insertOne({
   mobile : "1234567890"
 })
 
-db.students.insertOne({
-  name : "Dhruvi Khunt", 
-  department : "CS", 
-  semester : 6, 
-  mobile : "4554567890"
-})
+/*-------------------------------------------Exercise 3: Array of Simple Values--------------------------------------------*/
 
-
--------------------------------------------Exercise 3: Array of Simple Values----------------------------------------------------
-
-use examDB
 
 db.subjects.insertOne({
   course_name : "IT", 
@@ -44,9 +34,8 @@ db.subjects.insertOne({
 })
 
 
---------------------------------------------Exercise 4: Array of Objects----------------------------------------------------
+/*--------------------------------------------Exercise 4: Array of Objects----------------------------------------------------*/
 
-use examDB
 
 db.faculty.insertOne({
   department: "IT",
@@ -57,9 +46,8 @@ db.faculty.insertOne({
 })
 
 
---------------------------------------------Exercise 5: Explicit Primary Key------------------------------------------------
+/*--------------------------------------------Exercise 5: Explicit Primary Key------------------------------------------------*/
 
-use examDB
 
 db.students.insertOne({
   _id: ObjectId(),
@@ -68,9 +56,8 @@ db.students.insertOne({
   semester: 4
 })
 
---------------------------------------------Exercise 6: Duplicate Primary Key Observation--------------------------------------
+/*--------------------------------------------Exercise 6: Duplicate Primary Key Observation--------------------------------------*/
 
-use examDB
 
 db.faculty.insertOne({
   _id : ObjectId('695fb634f76965e1281e2617'), 
@@ -90,12 +77,11 @@ db.faculty.insertOne({
   }]
 })
 
-MongoServerError: E11000 duplicate key error collection: examDB.faculty index: _id_ dup key: { _id: ObjectId('695fb634f76965e1281e2617') }
+/*MongoServerError: E11000 duplicate key error collect.faculty index: _id_ dup key: { _id: ObjectId('695fb634f76965e1281e2617') }*/
 
-----------------------------------------Exercise 7: Multiple Inserts Using insert()---------------------------------------------
+/*----------------------------------------Exercise 7: Multiple Inserts Using insert()---------------------------------------------*/
 
-use examDB
 
-db.students.insertOne({ name: "A", semester: 1 })
-db.students.insertOne({ name: "B", semester: 2 })
-db.students.insertOne({ name: "C", semester: 3 })
+db.students.insertOne({ name: "Neel", semester: 1 })
+db.students.insertOne({ name: "Manan", semester: 2 })
+db.students.insertOne({ name: "Manav", semester: 3 })
