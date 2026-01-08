@@ -10,12 +10,14 @@ db.students.insertOne({
 
 db.students.insertOne({
   name : "Rajvi Panchani", 
-  department : "IT"
+  department : "IT",
   gender : "Female"
 })
 
 
 -----------------------------------Exercise 2: Insert Document with Multiple Fields-----------------------------------------
+
+use examDB
 
 db.students.insertOne({
   name : "Nency Khunt", 
@@ -34,6 +36,8 @@ db.students.insertOne({
 
 -------------------------------------------Exercise 3: Array of Simple Values----------------------------------------------------
 
+use examDB
+
 db.subjects.insertOne({
   course_name : "IT", 
   subject_list : ["NoSql", "DAV", "AIA", "AWT", "E-Comm"]
@@ -42,34 +46,31 @@ db.subjects.insertOne({
 
 --------------------------------------------Exercise 4: Array of Objects----------------------------------------------------
 
-db.faculty.insertOne({
-  department : "IT", 
-  teachers : [{
-    name : "Tushar Gohil", 
-    experience : 10
-  }]
-})
+use examDB
 
 db.faculty.insertOne({
-  department : "IT", 
-  teachers : [{
-    name : "Dhaval Rana", 
-    experience : 10
-  }]
+  department: "IT",
+  teachers: [
+    { name: "Tushar Gohil", experience: 10 },
+    { name: "Dhaval Rana", experience: 8 }
+  ]
 })
 
 
 --------------------------------------------Exercise 5: Explicit Primary Key------------------------------------------------
 
-db.faculty.insertOne({
-  _id : ObjectId('695fb634f76965e1281e2644'), 
-  department : "IT", 
-  teachers : [{
-    name : "Ankit Patel", 
-    experience : 10
-  }]
+use examDB
+
+db.students.insertOne({
+  _id: ObjectId(),
+  name: "Hitakshi Mavani",
+  department: "CS",
+  semester: 4
 })
+
 --------------------------------------------Exercise 6: Duplicate Primary Key Observation--------------------------------------
+
+use examDB
 
 db.faculty.insertOne({
   _id : ObjectId('695fb634f76965e1281e2617'), 
@@ -93,23 +94,8 @@ MongoServerError: E11000 duplicate key error collection: examDB.faculty index: _
 
 ----------------------------------------Exercise 7: Multiple Inserts Using insert()---------------------------------------------
 
-db.result.insertOne({
-  name : "Nency Khunt", 
-  SPI : 9, 
-  CPI : 8.5, 
-  backlogs : 0
-})
+use examDB
 
-db.result.insertOne({
-  name : "Dhruvi Khunt", 
-  SPI : 9.5, 
-  CPI : 9, 
-  backlogs : 0
-})
-
-db.result.insertOne({
-  name : "Rajvi Panchani", 
-  SPI : 7.5, 
-  CPI : 8, 
-  backlogs : 0
-})
+db.students.insertOne({ name: "A", semester: 1 })
+db.students.insertOne({ name: "B", semester: 2 })
+db.students.insertOne({ name: "C", semester: 3 })
