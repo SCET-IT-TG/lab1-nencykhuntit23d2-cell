@@ -1,65 +1,34 @@
 ----------------------------Exercise 1: Database & Collection Creation--------------------------------
 
-test> use examDB
-switched to db examDB
+use examDB
 
 examDB> db.students.insertOne({name : "Hitakshi Mavani", department : "CS",})
-{
-  acknowledged: true,
-  insertedId: ObjectId('695fb634f76965e1281e2623')
-}
+
 examDB> db.students.insertOne({name : "Rajvi Panchani", department : "IT",})
-{
-  acknowledged: true,
-  insertedId: ObjectId('695fb643f76965e1281e2624')
-}
+
 
 -----------------------------------Exercise 2: Insert Document with Multiple Fields-----------------------------------------
 
 examDB> db.students.insertOne({name : "Nency Khunt", department : "IT", semester : 6, mobile : 1234567890})
-{
-  acknowledged: true,
-  insertedId: ObjectId('695fb552f76965e1281e2621')
-}
 
 examDB> db.students.insertOne({name : "Dhruvi Khunt", department : "CS", semester : 6, mobile : 4554567890})
-{
-  acknowledged: true,
-  insertedId: ObjectId('695fb5f7f76965e1281e2622')
-}
 
 
 -------------------------------------------Exercise 3: Array of Simple Values----------------------------------------------------
 
 examDB> db.subjects.insertOne({course_name : "IT", subject_list : ["NoSql", "DAV", "AIA", "AWT", "E-Comm"]})
-{
-  acknowledged: true,
-  insertedIds: { '0': ObjectId('695fb914f76965e1281e2627') }
-}
 
 
 --------------------------------------------Exercise 4: Array of Objects----------------------------------------------------
 
 examDB> db.faculty.insertOne({department : "IT", teachers : [{name : "Tushar Gohil", experience : "10 Years"}]})
-{
-  acknowledged: true,
-  insertedId: ObjectId('695fc0a0f76965e1281e2628')
-}
 
 examDB> db.faculty.insertOne({department : "IT", teachers : [{name : "Dhaval Rana", experience : "10 Years"}]})
-{
-  acknowledged: true,
-  insertedId: ObjectId('695fc102f76965e1281e2629')
-}
+
 
 --------------------------------------------Exercise 5: Explicit Primary Key------------------------------------------------
 
 examDB> db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Patel", experience : "10 Years"}]})
-{
-  acknowledged: true,
-  insertedId: ObjectId('695fb634f76965e1281e2644')
-}
-
 --------------------------------------------Exercise 6: Duplicate Primary Key Observation--------------------------------------
 
 examDB> db.faculty.insertOne({_id : ObjectId('695fb634f76965e1281e2644'), department : "IT", teachers : [{name : "Ankit Kharvar", experience : "10 Years"}]})
@@ -69,18 +38,7 @@ MongoServerError: E11000 duplicate key error collection: examDB.faculty index: _
 ----------------------------------------Exercise 7: Multiple Inserts Using insert()---------------------------------------------
 
 examDB> db.result.insert({name : "Nency Khunt", SPI : 9, CPI : 8.5, backlogs : 0})
-DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
-{
-  acknowledged: true,
-  insertedIds: { '0': ObjectId('695fc672f76965e1281e262a') }
-}
+
 examDB> db.result.insert({name : "Dhruvi Khunt", SPI : 9.5, CPI : 9, backlogs : 0})
-{
-  acknowledged: true,
-  insertedIds: { '0': ObjectId('695fc6a7f76965e1281e262b') }
-}
+
 examDB> db.result.insert({name : "Rajvi Panchani", SPI : 7.5, CPI : 8, backlogs : 0})
-{
-  acknowledged: true,
-  insertedIds: { '0': ObjectId('695fc6c4f76965e1281e262c') }
-}
