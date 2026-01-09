@@ -19,11 +19,12 @@ db.students.insertOne({
 /*-----------------------------------Exercise 2: Insert Document with Multiple Fields----------------------------------*/
 
 db.students.insertOne({
-  name : "Hitakshi Mavani", 
-  department : "IT", 
-  semester : 6, 
-  mobile : "1234587999"
+  name: "Rahul Mehta",
+  department: "IT",
+  semester: 6,
+  mobile: "7777777777"
 });
+
 
 /*-------------------------------------------Exercise 3: Array of Simple Values--------------------------------------------*/
 
