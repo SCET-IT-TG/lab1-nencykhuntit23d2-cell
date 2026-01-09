@@ -25,13 +25,6 @@ db.students.insertOne({
   mobile : "1234587999"
 });
 
-db.students.insertOne({
-  name : "Rajvi Panchani", 
-  department : "IT", 
-  semester : 6, 
-  mobile : "5554587999"
-});
-
 /*-------------------------------------------Exercise 3: Array of Simple Values--------------------------------------------*/
 
 
