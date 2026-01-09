@@ -54,7 +54,8 @@ db.students.insertOne({
   _id: ObjectId(),
   name: "Hitakshi Mavani",
   department: "CS",
-  semester: 4
+  semester: 4,
+ mobile: "7777777777"
 })
 
 /*--------------------------------------------Exercise 6: Duplicate Primary Key Observation--------------------------------------*/
